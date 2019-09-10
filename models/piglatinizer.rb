@@ -6,8 +6,9 @@ class PigLatinizer
     @text = text.downcase
   end
 
-  def Pig_Latin
-    words = text.split(" ")
+  def pig_latin
+    words = text.split(" ", ". ")
     consonants = words.scan(/[bcdfghjklmnpqrstvwxyz]/)
+    vowels = words.scan(/[aeoui]/)
 
 end
