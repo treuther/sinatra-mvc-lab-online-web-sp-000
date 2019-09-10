@@ -10,5 +10,6 @@ class PigLatinizer
     words = text.split(" ", ". ")
     consonants = words.scan(/[bcdfghjklmnpqrstvwxyz]/)
     vowels = words.scan(/[aeoui]/)
-
+    if consonants = true
+      consonants.
 end
