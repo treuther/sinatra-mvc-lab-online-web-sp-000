@@ -42,6 +42,6 @@ class PigLatinizer
   end
 
   def piglatinize(sentence)
-    sentence.split.collect { |word| piglatinize(word) }.join(" ")
+    sentence.split.collect { |word| piglatinize_word(word) }.join(" ")
   end
 end
