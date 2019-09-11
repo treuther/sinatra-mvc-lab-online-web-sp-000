@@ -3,13 +3,11 @@ require_relative 'config/environment'
 class App < Sinatra::Base
 
   get '/' do
-    erb :index
+    erb :user_input
   end
 
-  post '/' do
-    @analyzed_text = PigLatinizer.new(params[:user_input])
-
-    erb :results
+  post '/piglatinize' do
+    translator = PigLatinizer.new
+    translator.to_pig_latin(params[:user_phrase])
   end
-
 end
