@@ -19,7 +19,7 @@
 
 class PigLatinizer
 
-  def piglatinize(word)
+  def piglatinize_word(word)
 
     #words that start with a vowel
     if !consonant?(word[0])
@@ -41,7 +41,7 @@ class PigLatinizer
     !char.match(/[aAeEiIoOuU]/)
   end
 
-  def to_pig_latin(sentence)
+  def piglatinize(sentence)
     sentence.split.collect { |word| piglatinize(word) }.join(" ")
   end
 end
